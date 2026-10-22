@@ -28,6 +28,14 @@ go.work.sum
 # env file
 .env
 
+# Local watchdog builds and run data
+/bin/
+/yafwd
+/yafwd-runs/
+/corpus/
+/findings/
+/artifacts/
+
 # Editor/IDE
 # .idea/
 # .vscode/
