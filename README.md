@@ -13,7 +13,7 @@ One watchdog invocation is a **session**. A session can contain one fuzzing proc
 The current version targets Linux and runs one fuzzing process at a time.
 
 | Fuzzer | Support status |
-|--------|----------------|
+| -------- | ---------------- |
 | libFuzzer | supported (single process) |
 | AFL++ | planned |
 | Go fuzz | planned |
@@ -48,7 +48,7 @@ The target must already be compiled with libFuzzer. The watchdog does not build 
 `--engine` and the `--` separator are required. Everything after the separator is an executable and its arguments, passed directly without a shell. Quote paths and arguments containing spaces as usual. The fuzzer inherits the directory from which you launch watchdog; relative paths are resolved from that directory. Use `cd` before launching it to choose another working directory.
 
 | Option | Default | Purpose |
-|--------|---------|---------|
+| -------- | --------- | --------- |
 | `-e`, `--engine` | required | Fuzzing engine; currently `libfuzzer` |
 | `-i`, `--input` | not set | Optional existing seed corpus directory |
 | `-o`, `--output` | `./findings` | Writable corpus directory; created if needed |
@@ -140,7 +140,7 @@ Result:             /work/yafwd-runs/<session>/result.json
 The session directory and command-line errors are printed to stderr with the `[watchdog]` prefix. The target's output is kept in the journal.
 
 | Exit code | Meaning |
-|-----------|---------|
+| ----------- | --------- |
 | `0` | Successful completion, or either fuzzing limit was reached |
 | `1` | The session ended on a target error or an unclassified unsuccessful process exit |
 | `2` | Invalid configuration or a watchdog error |
